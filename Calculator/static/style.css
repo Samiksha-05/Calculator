@@ -1,0 +1,132 @@
+/* Overall body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #00bcd4, #009688);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Container to center the calculator */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Calculator box styling */
+.calculator {
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Header styling with title and icon */
+.calculator-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calculator-header h1 {
+    font-size: 2rem;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.calculator-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    animation: bounce 1s infinite;
+}
+
+/* Display area styling */
+.display {
+    width: 100%;
+    height: 60px;
+    font-size: 28px;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    color: #333;
+    box-sizing: border-box;
+    transition: 0.3s ease-in-out;
+}
+
+/* Button grid layout */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Row container for aligning buttons */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+/* Button styling */
+.btn {
+    padding: 20px;
+    font-size: 22px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 70px; /* Keep buttons uniform */
+}
+
+.btn:hover {
+    background-color: #b2ebf2;
+    transform: scale(1.1);
+}
+
+/* Operator button styling */
+.operator {
+    background-color: #00796b;
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #004d40;
+}
+
+/* Equal button styling */
+.equal {
+    background-color: #004d40;
+    color: white;
+    width: 140px; /* Span two columns for equal button */
+}
+
+.equal:hover {
+    background-color: #00796b;
+}
+
+/* Button active effect */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animation for calculator icon */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
